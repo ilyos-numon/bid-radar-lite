@@ -1,0 +1,57 @@
+name: ci
+
+on:
+  push:
+    branches: ["**"]
+    tags-ignore: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      # 단위 테스트는 PGlite(프로세스 안 Postgres)와 모의 서버만 써서 외부 서비스가 필요 없다
+      # 러너 4대에 나눠 파일을 하나씩 돈다: 무거운 파일 두 개가 겹치면 파일마다 띄우는 PGlite 때문에 러너가 중간에 종료됐다
+      - run: node --no-warnings=ExperimentalWarning --test --test-concurrency=1 --test-shard=${{ matrix.shard }}/4 "tests/unit/**/*.test.mjs"
+      - run: node scripts/check-deploy.mjs --example
+
+  e2e:
+    if: github.event_name == 'workflow_dispatch'
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+      - run: npm ci
+      - run: supabase start
+      - run: npx playwright install --with-deps chromium
+      - run: npm run e2e
+      - if: always()
+        run: supabase stop --no-backup
