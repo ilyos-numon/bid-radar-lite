@@ -1,0 +1,34 @@
+{
+  "criteria": {
+    "keywords": [
+      "조경",
+      "수목",
+      "가로수",
+      "공원"
+    ],
+    "regions": [
+      "경기",
+      "서울"
+    ],
+    "budgetMin": 30000000,
+    "budgetMax": 500000000,
+    "maxItems": 100,
+    "excludeKeywords": [
+      "묘지"
+    ],
+    "synonyms": {
+      "녹지": "조경",
+      "정원": "공원"
+    }
+  },
+  "profile": {
+    "name": "샘플조경",
+    "licenses": [
+      "조경식재공사업"
+    ],
+    "regions": [
+      "경기"
+    ],
+    "smallBusiness": false
+  }
+}

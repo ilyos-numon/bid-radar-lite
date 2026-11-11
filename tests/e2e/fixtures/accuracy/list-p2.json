@@ -1,0 +1,77 @@
+{
+ "response": {
+  "header": {
+   "resultCode": "00",
+   "resultMsg": "NORMAL SERVICE."
+  },
+  "body": {
+   "items": [
+    {
+     "bidNtceNo": "20261102006",
+     "bidNtceOrd": "000",
+     "ntceKindNm": "등록공고",
+     "bidNtceNm": "고양시 공원 녹지 관리공사",
+     "ntceInsttNm": "경기도 고양시",
+     "dminsttNm": "경기도 고양시",
+     "bidNtceDt": "2026-11-02 09:00:00",
+     "bidClseDt": "2026-11-09 10:00:00",
+     "opengDt": "2026-11-09 11:00:00",
+     "presmptPrce": "70000000",
+     "bdgtAmt": "77000000",
+     "VAT": "7000000",
+     "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261102006",
+     "ntceSpecDocUrl1": "{{MOCK}}/files/broken.hwp",
+     "ntceSpecFileNm1": "공고문.hwp"
+    },
+    {
+     "bidNtceNo": "20261102007",
+     "bidNtceOrd": "000",
+     "ntceKindNm": "등록공고",
+     "bidNtceNm": "강남구 공원 보수공사",
+     "ntceInsttNm": "서울특별시 강남구",
+     "dminsttNm": "서울특별시 강남구",
+     "bidNtceDt": "2026-11-02 09:00:00",
+     "bidClseDt": "2026-11-12 10:00:00",
+     "opengDt": "2026-11-12 11:00:00",
+     "presmptPrce": "60000000",
+     "bdgtAmt": "66000000",
+     "VAT": "6000000",
+     "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261102007"
+    },
+    {
+     "bidNtceNo": "20261102008",
+     "bidNtceOrd": "000",
+     "ntceKindNm": "등록공고",
+     "bidNtceNm": "화성시 가로수 식재공사",
+     "ntceInsttNm": "경기도 화성시",
+     "dminsttNm": "경기도 화성시",
+     "bidNtceDt": "2026-11-02 09:00:00",
+     "bidClseDt": "2026-11-12 10:00:00",
+     "opengDt": "2026-11-12 11:00:00",
+     "presmptPrce": "110000000",
+     "bdgtAmt": "121000000",
+     "VAT": "11000000",
+     "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261102008"
+    },
+    {
+     "bidNtceNo": "20261102009",
+     "bidNtceOrd": "000",
+     "ntceKindNm": "등록공고",
+     "bidNtceNm": "안양시 수목 관리공사",
+     "ntceInsttNm": "경기도 안양시",
+     "dminsttNm": "경기도 안양시",
+     "bidNtceDt": "2026-11-02 09:00:00",
+     "bidClseDt": "2026-11-09 10:00:00",
+     "opengDt": "2026-11-09 11:00:00",
+     "presmptPrce": "95000000",
+     "bdgtAmt": "104500000",
+     "VAT": "9500000",
+     "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261102009"
+    }
+   ],
+   "numOfRows": 5,
+   "pageNo": 2,
+   "totalCount": 9
+  }
+ }
+}

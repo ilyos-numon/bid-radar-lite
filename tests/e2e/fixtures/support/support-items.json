@@ -1,0 +1,5 @@
+{"response":{"header":{"resultCode":"00","resultMsg":"NORMAL SERVICE."},"body":{"items":{"item":[
+{"pblancId":"SP-001","pblancNm":"조경 분야 소상공인 바우처","jrsdInsttNm":"예시 지원센터","reqstBeginEndDe":"20261001 ~ 20261130","pblancUrl":"https://support.example/p/1","bsnsSumryCn":"조경 업종 소상공인 바우처 지원","trgetNm":"소상공인"},
+{"pblancId":"SP-002","pblancNm":"청년 창업 컨설팅 지원","jrsdInsttNm":"예시 창업진흥원","reqstBeginEndDe":"20261005 ~ 20261215","pblancUrl":"https://support.example/p/2","bsnsSumryCn":"창업 컨설팅","trgetNm":"청년"},
+{"pblancId":"SP-003","pblancNm":"수출 물류비 지원사업","jrsdInsttNm":"예시 무역협회","reqstBeginEndDe":"20261010 ~ 20261220","pblancUrl":"https://support.example/p/3","bsnsSumryCn":"물류비","trgetNm":"수출기업"}
+]}}}}

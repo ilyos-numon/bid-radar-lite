@@ -1,0 +1,81 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "00",
+      "resultMsg": "정상"
+    },
+    "body": {
+      "items": [
+        {
+          "bidNtceNo": "R26BK01900001",
+          "bidNtceOrd": "000",
+          "lmtGrpNo": "1",
+          "lmtSno": "1",
+          "lcnsLmtNm": "조경식재공사업/4993",
+          "permsnIndstrytyList": "",
+          "indstrytyMfrcFldList": "",
+          "rgstDt": "2026-11-01 09:01:00",
+          "bsnsDivNm": "공사"
+        },
+        {
+          "bidNtceNo": "R26BK01900002",
+          "bidNtceOrd": "000",
+          "lmtGrpNo": "1",
+          "lmtSno": "1",
+          "lcnsLmtNm": "조경식재공사업/4993",
+          "permsnIndstrytyList": "",
+          "indstrytyMfrcFldList": "",
+          "rgstDt": "2026-11-01 09:01:00",
+          "bsnsDivNm": "공사"
+        },
+        {
+          "bidNtceNo": "R26BK01900002",
+          "bidNtceOrd": "000",
+          "lmtGrpNo": "1",
+          "lmtSno": "2",
+          "lcnsLmtNm": "조경시설물설치공사업/4994",
+          "permsnIndstrytyList": "",
+          "indstrytyMfrcFldList": "",
+          "rgstDt": "2026-11-01 09:01:00",
+          "bsnsDivNm": "공사"
+        },
+        {
+          "bidNtceNo": "R26BK01900003",
+          "bidNtceOrd": "000",
+          "lmtGrpNo": "1",
+          "lmtSno": "1",
+          "lcnsLmtNm": "토목공사업/0001",
+          "permsnIndstrytyList": "",
+          "indstrytyMfrcFldList": "",
+          "rgstDt": "2026-11-01 09:01:00",
+          "bsnsDivNm": "공사"
+        },
+        {
+          "bidNtceNo": "R26BK01900004",
+          "bidNtceOrd": "000",
+          "lmtGrpNo": "1",
+          "lmtSno": "1",
+          "lcnsLmtNm": "조경공사업/0004",
+          "permsnIndstrytyList": "",
+          "indstrytyMfrcFldList": "",
+          "rgstDt": "2026-11-01 09:01:00",
+          "bsnsDivNm": "공사"
+        },
+        {
+          "bidNtceNo": "R26BK01900004",
+          "bidNtceOrd": "000",
+          "lmtGrpNo": "2",
+          "lmtSno": "1",
+          "lcnsLmtNm": "조경식재공사업/4993",
+          "permsnIndstrytyList": "",
+          "indstrytyMfrcFldList": "",
+          "rgstDt": "2026-11-01 09:01:00",
+          "bsnsDivNm": "공사"
+        }
+      ],
+      "numOfRows": 500,
+      "pageNo": 1,
+      "totalCount": 6
+    }
+  }
+}

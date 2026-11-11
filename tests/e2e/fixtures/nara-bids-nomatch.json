@@ -1,0 +1,40 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "00",
+      "resultMsg": "NORMAL SERVICE."
+    },
+    "body": {
+      "items": [
+        {
+          "bidNtceNo": "20261029003",
+          "bidNtceOrd": "000",
+          "bidNtceNm": "부산광역시 가로수 정비",
+          "ntceInsttNm": "부산광역시",
+          "dminsttNm": "부산광역시",
+          "bidNtceDt": "2026-10-29 09:00:00",
+          "bidClseDt": "2026-11-05 10:00:00",
+          "presmptPrce": "",
+          "asignBdgtAmt": "90000000",
+          "prtcptLmtRgnNm": "부산광역시",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261029003"
+        },
+        {
+          "bidNtceNo": "20261029005",
+          "bidNtceOrd": "000",
+          "bidNtceNm": "서울특별시 사무용품 구매",
+          "ntceInsttNm": "서울특별시",
+          "dminsttNm": "서울특별시",
+          "bidNtceDt": "2026-10-29 09:00:00",
+          "bidClseDt": "2026-11-04 10:00:00",
+          "presmptPrce": "",
+          "asignBdgtAmt": "20000000",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261029005"
+        }
+      ],
+      "numOfRows": 100,
+      "pageNo": 1,
+      "totalCount": 2
+    }
+  }
+}

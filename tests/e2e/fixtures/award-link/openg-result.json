@@ -1,0 +1,105 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "00",
+      "resultMsg": "정상"
+    },
+    "body": {
+      "items": [
+        {
+          "bidNtceNo": "R26BK01900101",
+          "bidNtceOrd": "000",
+          "bidClsfcNo": "0",
+          "rbidNo": "000",
+          "bidNtceNm": "홍천군 어린이공원 리모델링 공사",
+          "opengDt": "2026-10-21 11:00:00",
+          "prtcptCnum": "212",
+          "opengCorpInfo": "업체A^0000000000^대표자^104520000^87.745",
+          "progrsDivCdNm": "개찰완료",
+          "inptDt": "2026-10-21 14:30:00",
+          "rsrvtnPrceFileExistnceYn": "Y",
+          "ntceInsttCd": "9990101",
+          "ntceInsttNm": "강원특별자치도 홍천군",
+          "dminsttCd": "9990101",
+          "dminsttNm": "강원특별자치도 홍천군",
+          "opengRsltNtcCntnts": ""
+        },
+        {
+          "bidNtceNo": "R26BK01900102",
+          "bidNtceOrd": "000",
+          "bidClsfcNo": "0",
+          "rbidNo": "000",
+          "bidNtceNm": "단양군 하천 정비 공사",
+          "opengDt": "2026-10-22 11:00:00",
+          "prtcptCnum": "145",
+          "opengCorpInfo": "업체B^0000000000^대표자^352100000^86.981",
+          "progrsDivCdNm": "개찰완료",
+          "inptDt": "2026-10-22 14:30:00",
+          "rsrvtnPrceFileExistnceYn": "Y",
+          "ntceInsttCd": "9990102",
+          "ntceInsttNm": "충청북도 단양군",
+          "dminsttCd": "9990102",
+          "dminsttNm": "충청북도 단양군",
+          "opengRsltNtcCntnts": ""
+        },
+        {
+          "bidNtceNo": "R26BK01900103",
+          "bidNtceOrd": "000",
+          "bidClsfcNo": "0",
+          "rbidNo": "000",
+          "bidNtceNm": "함안군 마을안길 정비공사",
+          "opengDt": "2026-10-23 11:00:00",
+          "prtcptCnum": "301",
+          "opengCorpInfo": "업체C^0000000000^대표자^78930000^88.012",
+          "progrsDivCdNm": "개찰완료",
+          "inptDt": "2026-10-23 14:30:00",
+          "rsrvtnPrceFileExistnceYn": "Y",
+          "ntceInsttCd": "9990103",
+          "ntceInsttNm": "경상남도 함안군",
+          "dminsttCd": "9990103",
+          "dminsttNm": "경상남도 함안군",
+          "opengRsltNtcCntnts": ""
+        },
+        {
+          "bidNtceNo": "R26BK01900104",
+          "bidNtceOrd": "000",
+          "bidClsfcNo": "0",
+          "rbidNo": "000",
+          "bidNtceNm": "남동구 수목 식재 공사",
+          "opengDt": "2026-10-24 11:00:00",
+          "prtcptCnum": "188",
+          "opengCorpInfo": "업체D^0000000000^대표자^45210000^87.995",
+          "progrsDivCdNm": "개찰완료",
+          "inptDt": "2026-10-24 14:30:00",
+          "rsrvtnPrceFileExistnceYn": "Y",
+          "ntceInsttCd": "9990104",
+          "ntceInsttNm": "인천광역시 남동구",
+          "dminsttCd": "9990104",
+          "dminsttNm": "인천광역시 남동구",
+          "opengRsltNtcCntnts": ""
+        },
+        {
+          "bidNtceNo": "R26BK01900105",
+          "bidNtceOrd": "000",
+          "bidClsfcNo": "0",
+          "rbidNo": "000",
+          "bidNtceNm": "수원시 도로 포장 보수공사",
+          "opengDt": "2026-10-25 11:00:00",
+          "prtcptCnum": "97",
+          "opengCorpInfo": "업체E^0000000000^대표자^129800000^86.774",
+          "progrsDivCdNm": "개찰완료",
+          "inptDt": "2026-10-25 14:30:00",
+          "rsrvtnPrceFileExistnceYn": "Y",
+          "ntceInsttCd": "9990105",
+          "ntceInsttNm": "경기도 수원시",
+          "dminsttCd": "9990105",
+          "dminsttNm": "경기도 수원시",
+          "opengRsltNtcCntnts": ""
+        }
+      ],
+      "numOfRows": 500,
+      "pageNo": 1,
+      "totalCount": 5
+    }
+  }
+}

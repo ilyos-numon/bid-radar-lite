@@ -1,0 +1,87 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "00",
+      "resultMsg": "정상"
+    },
+    "body": {
+      "items": [
+        {
+          "bsnsDivNm": "공사",
+          "refNo": "제2026-01호",
+          "prdctClsfcNoNm": "수원시 공원 조경 정비공사",
+          "orderInsttNm": "경기도 수원시",
+          "rlDminsttNm": "경기도 수원시",
+          "asignBdgtAmt": "250000000",
+          "rcptDt": "2026-11-01 10:00:00",
+          "opninRgstClseDt": "2026-11-06 18:00:00",
+          "ofclTelNo": "",
+          "ofclNm": "담당자",
+          "swBizObjYn": "N",
+          "dlvrTmlmtDt": "",
+          "dlvrDaynum": "0",
+          "bfSpecRgstNo": "R26BD00900001",
+          "specDocFileUrl1": "",
+          "specDocFileUrl2": "",
+          "specDocFileUrl3": "",
+          "specDocFileUrl4": "",
+          "specDocFileUrl5": "",
+          "rgstDt": "2026-11-01 10:00:00",
+          "chgDt": "2026-11-01 10:00:00",
+          "bidNtceNoList": ""
+        },
+        {
+          "bsnsDivNm": "공사",
+          "refNo": "제2026-02호",
+          "prdctClsfcNoNm": "수원시 가로수 식재 공사",
+          "orderInsttNm": "경기도 수원시",
+          "rlDminsttNm": "경기도 수원시",
+          "asignBdgtAmt": "80000000",
+          "rcptDt": "2026-11-01 10:00:00",
+          "opninRgstClseDt": "2026-11-07 18:00:00",
+          "ofclTelNo": "",
+          "ofclNm": "담당자",
+          "swBizObjYn": "N",
+          "dlvrTmlmtDt": "",
+          "dlvrDaynum": "0",
+          "bfSpecRgstNo": "R26BD00900002",
+          "specDocFileUrl1": "",
+          "specDocFileUrl2": "",
+          "specDocFileUrl3": "",
+          "specDocFileUrl4": "",
+          "specDocFileUrl5": "",
+          "rgstDt": "2026-11-01 10:00:00",
+          "chgDt": "2026-11-01 10:00:00",
+          "bidNtceNoList": ""
+        },
+        {
+          "bsnsDivNm": "공사",
+          "refNo": "제2026-03호",
+          "prdctClsfcNoNm": "함안군 도로 포장 보수공사",
+          "orderInsttNm": "경상남도 함안군",
+          "rlDminsttNm": "경상남도 함안군",
+          "asignBdgtAmt": "467500000",
+          "rcptDt": "2026-10-30 10:00:00",
+          "opninRgstClseDt": "2026-11-06 18:00:00",
+          "ofclTelNo": "",
+          "ofclNm": "담당자",
+          "swBizObjYn": "N",
+          "dlvrTmlmtDt": "",
+          "dlvrDaynum": "0",
+          "bfSpecRgstNo": "R26BD00900005",
+          "specDocFileUrl1": "",
+          "specDocFileUrl2": "",
+          "specDocFileUrl3": "",
+          "specDocFileUrl4": "",
+          "specDocFileUrl5": "",
+          "rgstDt": "2026-10-30 10:00:00",
+          "chgDt": "2026-11-01 14:05:00",
+          "bidNtceNoList": "R26BK01900005"
+        }
+      ],
+      "numOfRows": 500,
+      "pageNo": 1,
+      "totalCount": 3
+    }
+  }
+}

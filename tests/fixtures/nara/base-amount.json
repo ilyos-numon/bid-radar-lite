@@ -1,0 +1,57 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "00",
+      "resultMsg": "정상"
+    },
+    "body": {
+      "items": [
+        {
+          "bidNtceNo": "R26BK01900001",
+          "bidNtceOrd": "000",
+          "bidClsfcNo": "0",
+          "bidNtceNm": "마포구 어린이공원 리모델링 공사",
+          "bssamt": "132000000",
+          "bssamtOpenDt": "2026-11-01 18:23:06",
+          "rsrvtnPrceRngBgnRate": "-3",
+          "rsrvtnPrceRngEndRate": "+3",
+          "evlBssAmt": "0",
+          "sftyMngcst": "0",
+          "inptDt": "2026-11-01 18:23:06",
+          "bidPrceCalclAYn": "Y"
+        },
+        {
+          "bidNtceNo": "R26BK01900002",
+          "bidNtceOrd": "000",
+          "bidClsfcNo": "0",
+          "bidNtceNm": "부산광역시 하천 정비 공사",
+          "bssamt": "418000000",
+          "bssamtOpenDt": "2026-11-01 18:23:06",
+          "rsrvtnPrceRngBgnRate": "-3",
+          "rsrvtnPrceRngEndRate": "+3",
+          "evlBssAmt": "0",
+          "sftyMngcst": "0",
+          "inptDt": "2026-11-01 18:23:06",
+          "bidPrceCalclAYn": "Y"
+        },
+        {
+          "bidNtceNo": "R26BK01900003",
+          "bidNtceOrd": "000",
+          "bidClsfcNo": "0",
+          "bidNtceNm": "홍천군 마을안길 정비공사",
+          "bssamt": "99000000",
+          "bssamtOpenDt": "2026-11-01 18:23:06",
+          "rsrvtnPrceRngBgnRate": "-3",
+          "rsrvtnPrceRngEndRate": "+3",
+          "evlBssAmt": "0",
+          "sftyMngcst": "0",
+          "inptDt": "2026-11-01 18:23:06",
+          "bidPrceCalclAYn": "Y"
+        }
+      ],
+      "numOfRows": 500,
+      "pageNo": 1,
+      "totalCount": 3
+    }
+  }
+}

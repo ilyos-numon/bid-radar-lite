@@ -1,0 +1,25 @@
+{
+ "response": {
+  "header": {
+   "resultCode": "00",
+   "resultMsg": "NORMAL SERVICE."
+  },
+  "body": {
+   "items": [
+    {
+     "bfSpecRgstNo": "R26BD00900901",
+     "bsnsDivNm": "공사",
+     "prdctClsfcNoNm": "도로 포장 사전규격",
+     "orderInsttNm": "경기도 이천시",
+     "rlDminsttNm": "경기도 이천시",
+     "asignBdgtAmt": "200000000",
+     "rgstDt": "2026-11-02 10:00:00",
+     "opninRgstClseDt": "2026-11-06 18:00:00"
+    }
+   ],
+   "numOfRows": 5,
+   "pageNo": 1,
+   "totalCount": 1
+  }
+ }
+}

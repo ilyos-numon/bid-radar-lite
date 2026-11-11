@@ -1,0 +1,28 @@
+{
+ "response": {
+  "header": { "resultCode": "00", "resultMsg": "NORMAL SERVICE." },
+  "body": {
+   "items": [
+    {
+     "bidNtceNo": "20261102001",
+     "bidNtceOrd": "000",
+     "ntceKindNm": "등록공고",
+     "bidNtceNm": "수원시 가로수 전정 및 보호 공사",
+     "ntceInsttNm": "경기도 수원시",
+     "dminsttNm": "경기도 수원시",
+     "bidNtceDt": "2026-11-02 09:00:00",
+     "bidClseDt": "2026-11-07 10:00:00",
+     "opengDt": "2026-11-07 11:00:00",
+     "presmptPrce": "120000000",
+     "bdgtAmt": "132000000",
+     "VAT": "12000000",
+     "bfSpecRgstNo": "R26BD00900005",
+     "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261102001"
+    }
+   ],
+   "numOfRows": 5,
+   "pageNo": 1,
+   "totalCount": 1
+  }
+ }
+}

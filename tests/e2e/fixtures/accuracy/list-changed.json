@@ -1,0 +1,32 @@
+{
+ "response": {
+  "header": {
+   "resultCode": "00",
+   "resultMsg": "NORMAL SERVICE."
+  },
+  "body": {
+   "items": [
+    {
+     "bidNtceNo": "20261102009",
+     "bidNtceOrd": "000",
+     "ntceKindNm": "변경공고",
+     "bidNtceNm": "안양시 수목 관리공사",
+     "ntceInsttNm": "경기도 안양시",
+     "dminsttNm": "경기도 안양시",
+     "bidNtceDt": "2026-11-02 09:00:00",
+     "bidClseDt": "2026-11-10 10:00:00",
+     "opengDt": "2026-11-10 11:00:00",
+     "presmptPrce": "95000000",
+     "bdgtAmt": "104500000",
+     "VAT": "9500000",
+     "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261102009",
+     "chgDt": "2026-11-02 14:00:00",
+     "chgNtceRsn": "마감일 연장"
+    }
+   ],
+   "numOfRows": 5,
+   "pageNo": 1,
+   "totalCount": 1
+  }
+ }
+}

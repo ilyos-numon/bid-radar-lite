@@ -1,0 +1,92 @@
+{
+ "response": {
+  "header": {
+   "resultCode": "00",
+   "resultMsg": "NORMAL SERVICE."
+  },
+  "body": {
+   "items": [
+    {
+     "bidNtceNo": "20261102001",
+     "bidNtceOrd": "000",
+     "ntceKindNm": "등록공고",
+     "bidNtceNm": "수원시 가로수 전정 및 보호 공사",
+     "ntceInsttNm": "경기도 수원시",
+     "dminsttNm": "경기도 수원시",
+     "bidNtceDt": "2026-11-02 09:00:00",
+     "bidClseDt": "2026-11-07 10:00:00",
+     "opengDt": "2026-11-07 11:00:00",
+     "presmptPrce": "120000000",
+     "bdgtAmt": "132000000",
+     "VAT": "12000000",
+     "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261102001",
+     "ntceSpecDocUrl1": "{{MOCK}}/files/notice.hwpx",
+     "ntceSpecFileNm1": "공고문.hwpx"
+    },
+    {
+     "bidNtceNo": "20261102002",
+     "bidNtceOrd": "000",
+     "ntceKindNm": "등록공고",
+     "bidNtceNm": "마포구 어린이공원 리모델링 공사",
+     "ntceInsttNm": "서울특별시 마포구",
+     "dminsttNm": "서울특별시 마포구",
+     "bidNtceDt": "2026-11-02 09:00:00",
+     "bidClseDt": "2026-11-11 10:00:00",
+     "opengDt": "2026-11-11 11:00:00",
+     "presmptPrce": "250000000",
+     "bdgtAmt": "275000000",
+     "VAT": "25000000",
+     "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261102002"
+    },
+    {
+     "bidNtceNo": "20261102003",
+     "bidNtceOrd": "000",
+     "ntceKindNm": "등록공고",
+     "bidNtceNm": "성남시 수목 식재 공사",
+     "ntceInsttNm": "경기도 성남시",
+     "dminsttNm": "경기도 성남시",
+     "bidNtceDt": "2026-11-02 09:00:00",
+     "bidClseDt": "2026-11-11 10:00:00",
+     "opengDt": "2026-11-11 11:00:00",
+     "presmptPrce": "80000000",
+     "bdgtAmt": "88000000",
+     "VAT": "8000000",
+     "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261102003"
+    },
+    {
+     "bidNtceNo": "20261102004",
+     "bidNtceOrd": "000",
+     "ntceKindNm": "등록공고",
+     "bidNtceNm": "용인시 조경 시설물 정비공사",
+     "ntceInsttNm": "경기도 용인시",
+     "dminsttNm": "경기도 용인시",
+     "bidNtceDt": "2026-11-02 09:00:00",
+     "bidClseDt": "2026-11-08 10:00:00",
+     "opengDt": "2026-11-08 11:00:00",
+     "presmptPrce": "150000000",
+     "bdgtAmt": "165000000",
+     "VAT": "15000000",
+     "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261102004"
+    },
+    {
+     "bidNtceNo": "20261102005",
+     "bidNtceOrd": "000",
+     "ntceKindNm": "등록공고",
+     "bidNtceNm": "종로구 공원묘지 정비공사",
+     "ntceInsttNm": "서울특별시 종로구",
+     "dminsttNm": "서울특별시 종로구",
+     "bidNtceDt": "2026-11-02 09:00:00",
+     "bidClseDt": "2026-11-08 10:00:00",
+     "opengDt": "2026-11-08 11:00:00",
+     "presmptPrce": "90000000",
+     "bdgtAmt": "99000000",
+     "VAT": "9000000",
+     "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261102005"
+    }
+   ],
+   "numOfRows": 5,
+   "pageNo": 1,
+   "totalCount": 9
+  }
+ }
+}

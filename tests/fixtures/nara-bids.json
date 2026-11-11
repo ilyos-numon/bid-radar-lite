@@ -1,0 +1,104 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "00",
+      "resultMsg": "NORMAL SERVICE."
+    },
+    "body": {
+      "items": [
+        {
+          "bidNtceNo": "20261029001",
+          "bidNtceOrd": "000",
+          "bidNtceNm": "경기도 수원시 가로수 전정 및 보호 사업",
+          "ntceInsttNm": "경기도 수원시",
+          "dminsttNm": "경기도 수원시",
+          "bidNtceDt": "2026-10-29 09:00:00",
+          "bidClseDt": "2026-11-07 10:00:00",
+          "presmptPrce": "",
+          "asignBdgtAmt": "120000000",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261029001",
+          "prtcptLmtRgnNm": ""
+        },
+        {
+          "bidNtceNo": "20261029002",
+          "bidNtceOrd": "000",
+          "bidNtceNm": "서울특별시 마포구 어린이공원 리모델링",
+          "ntceInsttNm": "서울특별시 마포구",
+          "dminsttNm": "서울특별시 마포구",
+          "bidNtceDt": "2026-10-29 09:00:00",
+          "bidClseDt": "2026-11-12 10:00:00",
+          "presmptPrce": "380000000",
+          "asignBdgtAmt": "",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261029002",
+          "prtcptLmtRgnNm": ""
+        },
+        {
+          "bidNtceNo": "20261029003",
+          "bidNtceOrd": "000",
+          "bidNtceNm": "부산광역시 가로수 정비",
+          "ntceInsttNm": "부산광역시",
+          "dminsttNm": "부산광역시",
+          "bidNtceDt": "2026-10-29 09:00:00",
+          "bidClseDt": "2026-11-05 10:00:00",
+          "presmptPrce": "",
+          "asignBdgtAmt": "90000000",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261029003",
+          "prtcptLmtRgnNm": "부산광역시"
+        },
+        {
+          "bidNtceNo": "20261029004",
+          "bidNtceOrd": "000",
+          "bidNtceNm": "경기도 화성시 조경 시설 공사",
+          "ntceInsttNm": "경기도 화성시",
+          "dminsttNm": "경기도 화성시",
+          "bidNtceDt": "2026-10-29 09:00:00",
+          "bidClseDt": "2026-11-06 10:00:00",
+          "presmptPrce": "",
+          "asignBdgtAmt": "1000000000",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261029004"
+        },
+        {
+          "bidNtceNo": "20261029005",
+          "bidNtceOrd": "000",
+          "bidNtceNm": "서울특별시 사무용품 구매",
+          "ntceInsttNm": "서울특별시",
+          "dminsttNm": "서울특별시",
+          "bidNtceDt": "2026-10-29 09:00:00",
+          "bidClseDt": "2026-11-04 10:00:00",
+          "presmptPrce": "",
+          "asignBdgtAmt": "20000000",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261029005"
+        },
+        {
+          "bidNtceNo": "20261029001",
+          "bidNtceOrd": "000",
+          "bidNtceNm": "경기도 수원시 가로수 전정 및 보호 사업",
+          "ntceInsttNm": "경기도 수원시",
+          "dminsttNm": "경기도 수원시",
+          "bidNtceDt": "2026-10-29 09:00:00",
+          "bidClseDt": "2026-11-07 10:00:00",
+          "presmptPrce": "",
+          "asignBdgtAmt": "120000000",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261029001",
+          "prtcptLmtRgnNm": ""
+        },
+        {
+          "bidNtceNo": "20261029007",
+          "bidNtceOrd": "000",
+          "bidNtceNm": "경기도 용인시 수목 관리 용역",
+          "ntceInsttNm": "경기도 용인시",
+          "dminsttNm": "경기도 용인시",
+          "bidNtceDt": "2026-10-29 09:00:00",
+          "bidClseDt": "2026-11-03 10:00:00",
+          "presmptPrce": "",
+          "asignBdgtAmt": "",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/20261029007",
+          "prtcptLmtRgnNm": ""
+        }
+      ],
+      "numOfRows": 100,
+      "pageNo": 1,
+      "totalCount": 7
+    }
+  }
+}

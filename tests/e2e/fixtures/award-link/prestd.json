@@ -1,0 +1,23 @@
+{
+ "response": {
+  "header": { "resultCode": "00", "resultMsg": "NORMAL SERVICE." },
+  "body": {
+   "items": [
+    {
+     "bfSpecRgstNo": "R26BD00900005",
+     "bsnsDivNm": "공사",
+     "prdctClsfcNoNm": "가로수 전정 및 보호 공사 사전규격",
+     "orderInsttNm": "경기도 수원시",
+     "rlDminsttNm": "경기도 수원시",
+     "asignBdgtAmt": "132000000",
+     "rgstDt": "2026-10-30 10:00:00",
+     "opninRgstClseDt": "2026-11-06 18:00:00",
+     "bidNtceNoList": "20261102001"
+    }
+   ],
+   "numOfRows": 5,
+   "pageNo": 1,
+   "totalCount": 1
+  }
+ }
+}

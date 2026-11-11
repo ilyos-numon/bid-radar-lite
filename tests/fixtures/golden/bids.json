@@ -1,0 +1,1018 @@
+[
+  {
+    "bidNtceNo": "R26BK02000001",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "조경 식재 공사",
+    "ntceInsttNm": "부산광역시 B구청",
+    "dminsttNm": "부산광역시 B구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000001",
+    "presmptPrce": "150000000",
+    "VAT": "15000000",
+    "bdgtAmt": "165000000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000002",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "가로수 정비 공사",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000002",
+    "presmptPrce": "80000000",
+    "VAT": "8000000",
+    "bdgtAmt": "88000000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000003",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원 시설 보수 공사",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000003",
+    "presmptPrce": "90000000",
+    "VAT": "9000000",
+    "bdgtAmt": "99000000.00000001",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000003",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      }
+    ],
+    "prtcptPsblRgnList": [
+      {
+        "bidNtceNo": "R26BK02000003",
+        "bidNtceOrd": "000",
+        "lmtSno": "1",
+        "prtcptPsblRgnNm": "경기도"
+      }
+    ]
+  },
+  {
+    "bidNtceNo": "R26BK02000004",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "조경공사(관내 업체 한정)",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000004",
+    "presmptPrce": "100000000",
+    "VAT": "10000000",
+    "bdgtAmt": "110000000.00000001",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000004",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      }
+    ],
+    "prtcptPsblRgnList": [
+      {
+        "bidNtceNo": "R26BK02000004",
+        "bidNtceOrd": "000",
+        "lmtSno": "1",
+        "prtcptPsblRgnNm": "부산광역시"
+      }
+    ]
+  },
+  {
+    "bidNtceNo": "R26BK02000005",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "수목 식재 및 관리",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000005",
+    "presmptPrce": "70000000",
+    "VAT": "7000000",
+    "bdgtAmt": "77000000",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000005",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      }
+    ],
+    "prtcptPsblRgnList": [
+      {
+        "bidNtceNo": "R26BK02000005",
+        "bidNtceOrd": "000",
+        "lmtSno": "1",
+        "prtcptPsblRgnNm": "전라남도"
+      }
+    ]
+  },
+  {
+    "bidNtceNo": "R26BK02000006",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원 조성 공사",
+    "ntceInsttNm": "대구광역시 D구청",
+    "dminsttNm": "대구광역시 D구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000006",
+    "presmptPrce": "200000000",
+    "VAT": "20000000",
+    "bdgtAmt": "220000000.00000003",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000006",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      }
+    ],
+    "prtcptPsblRgnList": [
+      {
+        "bidNtceNo": "R26BK02000006",
+        "bidNtceOrd": "000",
+        "lmtSno": "1",
+        "prtcptPsblRgnNm": "서울특별시"
+      }
+    ]
+  },
+  {
+    "bidNtceNo": "R26BK02000007",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "수목 식재 공사",
+    "ntceInsttNm": "인천광역시 E구청",
+    "dminsttNm": "인천광역시 E구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000007",
+    "presmptPrce": "60000000",
+    "VAT": "6000000",
+    "bdgtAmt": "66000000.00000001",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000007",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      }
+    ],
+    "prtcptPsblRgnList": [
+      {
+        "bidNtceNo": "R26BK02000007",
+        "bidNtceOrd": "000",
+        "lmtSno": "1",
+        "prtcptPsblRgnNm": "인천광역시"
+      }
+    ]
+  },
+  {
+    "bidNtceNo": "R26BK02000008",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "가로수 교체 공사",
+    "ntceInsttNm": "부산광역시 B구청",
+    "dminsttNm": "부산광역시 B구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000008",
+    "presmptPrce": "120000000",
+    "VAT": "12000000",
+    "bdgtAmt": "132000000.00000001",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000008",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      }
+    ],
+    "prtcptPsblRgnList": [
+      {
+        "bidNtceNo": "R26BK02000008",
+        "bidNtceOrd": "000",
+        "lmtSno": "1",
+        "prtcptPsblRgnNm": "경기도"
+      },
+      {
+        "bidNtceNo": "R26BK02000008",
+        "bidNtceOrd": "000",
+        "lmtSno": "2",
+        "prtcptPsblRgnNm": "서울특별시"
+      }
+    ]
+  },
+  {
+    "bidNtceNo": "R26BK02000009",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "조경 식재 및 시설물 공사",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000009",
+    "presmptPrce": "130000000",
+    "VAT": "13000000",
+    "bdgtAmt": "143000000",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000009",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재·시설물공사업/4995"
+      }
+    ],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000010",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원 녹지 조경 공사",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000010",
+    "presmptPrce": "110000000",
+    "VAT": "11000000",
+    "bdgtAmt": "121000000.00000001",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000010",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      }
+    ],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000011",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "가로수 전정 공사",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000011",
+    "presmptPrce": "95000000",
+    "VAT": "9500000",
+    "bdgtAmt": "104500000.00000001",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000011",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "토목공사업/0001"
+      }
+    ],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000012",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원 조경 시설 공사",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000012",
+    "presmptPrce": "140000000",
+    "VAT": "14000000",
+    "bdgtAmt": "154000000",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000012",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      },
+      {
+        "bidNtceNo": "R26BK02000012",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "2",
+        "lcnsLmtNm": "조경시설물설치공사업/4994"
+      }
+    ],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000013",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "조경 유지관리 공사 (3개년)",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000013",
+    "presmptPrce": "120000000",
+    "VAT": "12000000",
+    "bdgtAmt": "132000000.00000001",
+    "asignBdgtAmt": "900000000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000014",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "수목 관리 공사",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000014",
+    "presmptPrce": "600000000",
+    "VAT": "60000000",
+    "bdgtAmt": "660000000",
+    "asignBdgtAmt": "300000000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000015",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원 보수 공사",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000015",
+    "presmptPrce": "50000000",
+    "VAT": "5000000",
+    "bdgtAmt": "55000000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000016",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "조경수 식재 공사",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000016",
+    "bssamt": "45000000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000017",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "가로수 관리 공사",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000017",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000018",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원 청소 공사",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000018",
+    "presmptPrce": "20000000",
+    "VAT": "2000000",
+    "bdgtAmt": "22000000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000019",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "조경 대규모 공사",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000019",
+    "presmptPrce": "700000000",
+    "VAT": "70000000",
+    "bdgtAmt": "770000000.0000001",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000020",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원 소규모 보수",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000020",
+    "presmptPrce": "30000000",
+    "VAT": "3000000",
+    "bdgtAmt": "33000000.000000004",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000021",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "수목 대형 공사",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000021",
+    "presmptPrce": "500000000",
+    "VAT": "50000000",
+    "bdgtAmt": "550000000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000022",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원묘지 조성 공사",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000022",
+    "presmptPrce": "200000000",
+    "VAT": "20000000",
+    "bdgtAmt": "220000000.00000003",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000023",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "봉안당 및 공원묘지 정비",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000023",
+    "presmptPrce": "150000000",
+    "VAT": "15000000",
+    "bdgtAmt": "165000000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000024",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "조경 식재 공사",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "취소공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000024",
+    "presmptPrce": "100000000",
+    "VAT": "10000000",
+    "bdgtAmt": "110000000.00000001",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000025",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "가로수 정비 공사",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "취소공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000025",
+    "presmptPrce": "90000000",
+    "VAT": "9000000",
+    "bdgtAmt": "99000000.00000001",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000026",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원 시설 보수 공사",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "변경공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000026",
+    "presmptPrce": "80000000",
+    "VAT": "8000000",
+    "bdgtAmt": "88000000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000027",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "수목 식재 공사",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "재공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000027",
+    "presmptPrce": "85000000",
+    "VAT": "8500000",
+    "bdgtAmt": "93500000.00000001",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000028",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "조경 공사",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "연기공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000028",
+    "presmptPrce": "75000000",
+    "VAT": "7500000",
+    "bdgtAmt": "82500000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000029",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "녹지 관리 용역",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000029",
+    "presmptPrce": "65000000",
+    "VAT": "6500000",
+    "bdgtAmt": "71500000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000030",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "정원 조성 공사",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000030",
+    "presmptPrce": "88000000",
+    "VAT": "8800000",
+    "bdgtAmt": "96800000.00000001",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000031",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "도로 포장 공사",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000031",
+    "presmptPrce": "100000000",
+    "VAT": "10000000",
+    "bdgtAmt": "110000000.00000001",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000032",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "학교 급식실 개선 공사",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000032",
+    "presmptPrce": "100000000",
+    "VAT": "10000000",
+    "bdgtAmt": "110000000.00000001",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000033",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "전산장비 구입",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000033",
+    "presmptPrce": "60000000",
+    "VAT": "6000000",
+    "bdgtAmt": "66000000.00000001",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000034",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "상수도 관로 정비 공사",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000034",
+    "presmptPrce": "150000000",
+    "VAT": "15000000",
+    "bdgtAmt": "165000000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000035",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "가로수 전정 용역",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000035",
+    "presmptPrce": "45000000",
+    "VAT": "4500000",
+    "bdgtAmt": "49500000.00000001",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000036",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원 야외 운동시설 설치",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000036",
+    "presmptPrce": "100000000",
+    "VAT": "10000000",
+    "bdgtAmt": "110000000.00000001",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000037",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원 산책로 조경",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000037",
+    "presmptPrce": "77000000",
+    "VAT": "7700000",
+    "bdgtAmt": "84700000",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000037",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      }
+    ],
+    "prtcptPsblRgnList": [
+      {
+        "bidNtceNo": "R26BK02000037",
+        "bidNtceOrd": "000",
+        "lmtSno": "1",
+        "prtcptPsblRgnNm": "경기도 수원시"
+      }
+    ]
+  },
+  {
+    "bidNtceNo": "R26BK02000038",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "수목원 진입로 조경",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000038",
+    "presmptPrce": "66000000",
+    "VAT": "6600000",
+    "bdgtAmt": "72600000",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000038",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      }
+    ],
+    "prtcptPsblRgnList": [
+      {
+        "bidNtceNo": "R26BK02000038",
+        "bidNtceOrd": "000",
+        "lmtSno": "1",
+        "prtcptPsblRgnNm": "경기도 광주시"
+      }
+    ]
+  },
+  {
+    "bidNtceNo": "R26BK02000039",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원 조성 사업",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000039",
+    "presmptPrce": "99000000",
+    "VAT": "9900000",
+    "bdgtAmt": "108900000.00000001",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000039",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      }
+    ],
+    "prtcptPsblRgnList": [
+      {
+        "bidNtceNo": "R26BK02000039",
+        "bidNtceOrd": "000",
+        "lmtSno": "1",
+        "prtcptPsblRgnNm": "광주광역시"
+      }
+    ]
+  },
+  {
+    "bidNtceNo": "R26BK02000040",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원 시설 정비",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000040",
+    "presmptPrce": "98000000",
+    "VAT": "9800000",
+    "bdgtAmt": "107800000.00000001",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000040",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      }
+    ],
+    "prtcptPsblRgnList": [
+      {
+        "bidNtceNo": "R26BK02000040",
+        "bidNtceOrd": "000",
+        "lmtSno": "1",
+        "prtcptPsblRgnNm": "서울특별시"
+      },
+      {
+        "bidNtceNo": "R26BK02000040",
+        "bidNtceOrd": "000",
+        "lmtSno": "2",
+        "prtcptPsblRgnNm": "부산광역시"
+      }
+    ]
+  },
+  {
+    "bidNtceNo": "R26BK02000041",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "가로수 식재 공사",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000041",
+    "presmptPrce": "92000000",
+    "VAT": "9200000",
+    "bdgtAmt": "101200000.00000001",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000041",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      }
+    ],
+    "prtcptPsblRgnList": [
+      {
+        "bidNtceNo": "R26BK02000041",
+        "bidNtceOrd": "000",
+        "lmtSno": "1",
+        "prtcptPsblRgnNm": "충청남도"
+      }
+    ]
+  },
+  {
+    "bidNtceNo": "R26BK02000042",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원 관리 공사",
+    "ntceInsttNm": "서울특별시 A구청",
+    "dminsttNm": "서울특별시 A구청",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000042",
+    "asignBdgtAmt": "100000000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000043",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "수목 관리 용역",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000043",
+    "presmptPrce": "40000000",
+    "VAT": "4000000",
+    "bdgtAmt": "44000000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000044",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "가로수 보식 공사",
+    "ntceInsttNm": "경기도 C시",
+    "dminsttNm": "경기도 C시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000044",
+    "presmptPrce": "20000000",
+    "VAT": "2000000",
+    "bdgtAmt": "22000000",
+    "lcnsLmtList": [],
+    "prtcptPsblRgnList": []
+  },
+  {
+    "bidNtceNo": "R26BK02000045",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "공원 시설 개선 공사",
+    "ntceInsttNm": "제주특별자치도 F시",
+    "dminsttNm": "제주특별자치도 F시",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000045",
+    "presmptPrce": "100000000",
+    "VAT": "10000000",
+    "bdgtAmt": "110000000.00000001",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000045",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      }
+    ],
+    "prtcptPsblRgnList": [
+      {
+        "bidNtceNo": "R26BK02000045",
+        "bidNtceOrd": "000",
+        "lmtSno": "1",
+        "prtcptPsblRgnNm": "제주특별자치도"
+      }
+    ]
+  },
+  {
+    "bidNtceNo": "R26BK02000046",
+    "bidNtceOrd": "000",
+    "bidNtceNm": "조경 식재 공사 (지역제한 없음)",
+    "ntceInsttNm": "강원특별자치도 G군",
+    "dminsttNm": "강원특별자치도 G군",
+    "bidNtceDt": "2026-11-01 09:00:00",
+    "bidClseDt": "2026-11-12 10:00:00",
+    "opengDt": "2026-11-12 11:00:00",
+    "ntceKindNm": "등록공고",
+    "bidNtceDtlUrl": "https://example.invalid/bid/R26BK02000046",
+    "presmptPrce": "180000000",
+    "VAT": "18000000",
+    "bdgtAmt": "198000000.00000003",
+    "lcnsLmtList": [
+      {
+        "bidNtceNo": "R26BK02000046",
+        "bidNtceOrd": "000",
+        "lmtGrpNo": "1",
+        "lmtSno": "1",
+        "lcnsLmtNm": "조경식재공사업/4993"
+      }
+    ],
+    "prtcptPsblRgnList": []
+  }
+]

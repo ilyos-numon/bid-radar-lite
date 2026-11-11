@@ -1,0 +1,39 @@
+{
+ "response": {
+  "header": {
+   "resultCode": "00",
+   "resultMsg": "NORMAL SERVICE."
+  },
+  "body": {
+   "items": [
+    {
+     "bidNtceNo": "20261102001",
+     "bidNtceOrd": "000",
+     "lmtGrpNo": "1",
+     "lmtSno": "1",
+     "lcnsLmtNm": "조경식재공사업/4993",
+     "bsnsDivNm": "공사"
+    },
+    {
+     "bidNtceNo": "20261102003",
+     "bidNtceOrd": "000",
+     "lmtGrpNo": "1",
+     "lmtSno": "1",
+     "lcnsLmtNm": "조경식재공사업/4993",
+     "bsnsDivNm": "공사"
+    },
+    {
+     "bidNtceNo": "20261102004",
+     "bidNtceOrd": "000",
+     "lmtGrpNo": "1",
+     "lmtSno": "1",
+     "lcnsLmtNm": "조경식재공사업/4993",
+     "bsnsDivNm": "공사"
+    }
+   ],
+   "numOfRows": 5,
+   "pageNo": 1,
+   "totalCount": 3
+  }
+ }
+}

@@ -1,0 +1,55 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "00",
+      "resultMsg": "정상"
+    },
+    "body": {
+      "items": [
+        {
+          "bidNtceNo": "R26BK01900001",
+          "bidNtceOrd": "000",
+          "lmtSno": "1",
+          "prtcptPsblRgnNm": "경기도",
+          "rgstDt": "2026-11-01 09:01:00",
+          "bsnsDivNm": "공사"
+        },
+        {
+          "bidNtceNo": "R26BK01900002",
+          "bidNtceOrd": "000",
+          "lmtSno": "1",
+          "prtcptPsblRgnNm": "서울특별시",
+          "rgstDt": "2026-11-01 09:01:00",
+          "bsnsDivNm": "공사"
+        },
+        {
+          "bidNtceNo": "R26BK01900002",
+          "bidNtceOrd": "000",
+          "lmtSno": "2",
+          "prtcptPsblRgnNm": "경기도",
+          "rgstDt": "2026-11-01 09:01:00",
+          "bsnsDivNm": "공사"
+        },
+        {
+          "bidNtceNo": "R26BK01900003",
+          "bidNtceOrd": "000",
+          "lmtSno": "1",
+          "prtcptPsblRgnNm": "부산광역시",
+          "rgstDt": "2026-11-01 09:01:00",
+          "bsnsDivNm": "공사"
+        },
+        {
+          "bidNtceNo": "R26BK01900004",
+          "bidNtceOrd": "000",
+          "lmtSno": "1",
+          "prtcptPsblRgnNm": "강원특별자치도 홍천군",
+          "rgstDt": "2026-11-01 09:01:00",
+          "bsnsDivNm": "공사"
+        }
+      ],
+      "numOfRows": 500,
+      "pageNo": 1,
+      "totalCount": 5
+    }
+  }
+}

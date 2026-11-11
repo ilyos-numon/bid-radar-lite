@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>성남시 입찰공고 게시판</title>
+    <link>https://feed.example/notice</link>
+    <description>입찰공고 목록</description>
+    <item>
+      <title>공원 시설물 보수 공사 입찰공고 (마감 2026-11-20)</title>
+      <link>https://feed.example/notice/101</link>
+      <description>공원 벤치와 정자 보수 공사</description>
+      <pubDate>Thu, 29 Oct 2026 09:30:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>사무용품 구매 입찰공고</title>
+      <link>https://feed.example/notice/102</link>
+      <description>복사용지와 필기구 구매</description>
+      <pubDate>Thu, 29 Oct 2026 09:20:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>청사 청소 용역 입찰공고</title>
+      <link>https://feed.example/notice/103</link>
+      <description>청사 환경 미화 용역</description>
+      <pubDate>Thu, 29 Oct 2026 09:10:00 +0900</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+{
+ "response": {
+  "header": {
+   "resultCode": "00",
+   "resultMsg": "NORMAL SERVICE."
+  },
+  "body": {
+   "items": [
+    {
+     "bidNtceNo": "20261102001",
+     "bidNtceOrd": "000",
+     "lmtSno": "1",
+     "prtcptPsblRgnNm": "경기도",
+     "bsnsDivNm": "공사"
+    },
+    {
+     "bidNtceNo": "20261102004",
+     "bidNtceOrd": "000",
+     "lmtSno": "1",
+     "prtcptPsblRgnNm": "부산광역시",
+     "bsnsDivNm": "공사"
+    }
+   ],
+   "numOfRows": 5,
+   "pageNo": 1,
+   "totalCount": 2
+  }
+ }
+}

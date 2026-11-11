@@ -1,0 +1,59 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "00",
+      "resultMsg": "정상"
+    },
+    "body": {
+      "items": [
+        {
+          "bidNtceNo": "R26BK01900101",
+          "bidNtceOrd": "000",
+          "bidClsfcNo": "0",
+          "rbidNo": "000",
+          "ntceDivCd": "통050001",
+          "bidNtceNm": "홍천군 어린이공원 리모델링 공사",
+          "prtcptCnum": "212",
+          "bidwinnrNm": "업체A",
+          "bidwinnrBizno": "0000000000",
+          "bidwinnrCeoNm": "대표자",
+          "bidwinnrAdrs": "",
+          "bidwinnrTelNo": "",
+          "sucsfbidAmt": "104520000",
+          "sucsfbidRate": "87.745",
+          "rlOpengDt": "2026-10-21 11:00:00",
+          "dminsttCd": "9990101",
+          "dminsttNm": "강원특별자치도 홍천군",
+          "rgstDt": "2026-10-28 09:30:00",
+          "fnlSucsfDate": "2026-10-28",
+          "fnlSucsfCorpOfcl": ""
+        },
+        {
+          "bidNtceNo": "R26BK01900105",
+          "bidNtceOrd": "000",
+          "bidClsfcNo": "0",
+          "rbidNo": "000",
+          "ntceDivCd": "통050001",
+          "bidNtceNm": "수원시 도로 포장 보수공사",
+          "prtcptCnum": "97",
+          "bidwinnrNm": "업체E",
+          "bidwinnrBizno": "0000000000",
+          "bidwinnrCeoNm": "대표자",
+          "bidwinnrAdrs": "",
+          "bidwinnrTelNo": "",
+          "sucsfbidAmt": "129800000",
+          "sucsfbidRate": "86.774",
+          "rlOpengDt": "2026-10-25 11:00:00",
+          "dminsttCd": "9990105",
+          "dminsttNm": "경기도 수원시",
+          "rgstDt": "2026-10-30 09:30:00",
+          "fnlSucsfDate": "2026-10-30",
+          "fnlSucsfCorpOfcl": ""
+        }
+      ],
+      "numOfRows": 500,
+      "pageNo": 1,
+      "totalCount": 2
+    }
+  }
+}
