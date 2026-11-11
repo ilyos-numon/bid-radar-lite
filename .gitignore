@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Runtime data
+data/
+*.log
+
+# Test output
+test-results/
+playwright-report/
+tests/e2e/screenshots/*.png
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local worktrees
+.worktrees/
+
+# Supabase Studio local SQL snippets
+supabase/snippets/

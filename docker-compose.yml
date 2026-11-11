@@ -1,0 +1,38 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8820:8820"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      # 기존 모드: PGlite 데이터 디렉토리 (볼륨 ./data 안). 가입 모드: 공유 Postgres 주소(app_worker, 세션 모드)
+      - APP_DATA_DIR=/app/data/pg
+      - APP_DB_URL=${APP_DB_URL:-}
+    volumes:
+      - ./data:/app/data
+  n8n:
+    image: n8nio/n8n:2.45.5
+    ports:
+      - "5689:5678"
+    environment:
+      - NARA_API_KEY=${NARA_API_KEY:-}
+      - NARA_API_BASE=${NARA_API_BASE:-https://apis.data.go.kr/1230000/ad/BidPublicInfoService}
+      - NARA_BID_OPERATION=${NARA_BID_OPERATION:-getBidPblancListInfoCnstwk}
+      - NOTIFY_WEBHOOK_URL=${NOTIFY_WEBHOOK_URL:-}
+      # 앱을 호스트에서 띄우는 경우(npm run dev) .env 에 APP_BASE_URL_FOR_N8N=http://host.docker.internal:8820 로 덮어쓴다.
+      - APP_BASE_URL=${APP_BASE_URL_FOR_N8N:-http://app:8820}
+      - APP_JOB_TOKEN=${APP_JOB_TOKEN:-}
+      - GENERIC_TIMEZONE=Asia/Seoul
+      - TZ=Asia/Seoul
+      - N8N_BLOCK_ENV_ACCESS_IN_NODE=false
+      - N8N_DIAGNOSTICS_ENABLED=false
+      - N8N_RUNNERS_ENABLED=true
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ./workflows:/home/node/workflows:ro
+volumes:
+  n8n_data: {}
