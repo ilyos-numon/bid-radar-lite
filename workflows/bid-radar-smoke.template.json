@@ -1,0 +1,110 @@
+{
+  "id": "bidRadarSmoke001",
+  "name": "bid-radar-smoke",
+  "active": false,
+  "nodes": [
+    {
+      "id": "0b6a3c1e-1f00-4a01-9a01-000000000001",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [0, 0],
+      "parameters": {}
+    },
+    {
+      "id": "0b6a3c1e-1f00-4a01-9a01-000000000002",
+      "name": "Daily 08:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [0, 200],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "days",
+              "daysInterval": 1,
+              "triggerAtHour": 8,
+              "triggerAtMinute": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "0b6a3c1e-1f00-4a01-9a01-000000000003",
+      "name": "Fetch Nara Bids",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [240, 100],
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.NARA_API_BASE }}/{{ $env.NARA_BID_OPERATION }}",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "serviceKey", "value": "={{ $env.NARA_API_KEY }}" },
+            { "name": "type", "value": "json" },
+            { "name": "inqryDiv", "value": "1" },
+            { "name": "pageNo", "value": "1" },
+            { "name": "numOfRows", "value": "100" },
+            { "name": "inqryBgnDt", "value": "={{ $now.minus({days:1}).toFormat('yyyyMMddHHmm') }}" },
+            { "name": "inqryEndDt", "value": "={{ $now.toFormat('yyyyMMddHHmm') }}" }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "0b6a3c1e-1f00-4a01-9a01-000000000004",
+      "name": "Match Criteria",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [480, 100],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "language": "javaScript",
+        "jsCode": "/*@@MATCH_CODE@@*/"
+      }
+    },
+    {
+      "id": "0b6a3c1e-1f00-4a01-9a01-000000000005",
+      "name": "Send Notification",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [720, 100],
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.NOTIFY_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [[{ "node": "Fetch Nara Bids", "type": "main", "index": 0 }]]
+    },
+    "Daily 08:00": {
+      "main": [[{ "node": "Fetch Nara Bids", "type": "main", "index": 0 }]]
+    },
+    "Fetch Nara Bids": {
+      "main": [[{ "node": "Match Criteria", "type": "main", "index": 0 }]]
+    },
+    "Match Criteria": {
+      "main": [[{ "node": "Send Notification", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Seoul"
+  },
+  "pinData": {}
+}

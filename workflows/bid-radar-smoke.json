@@ -1,0 +1,178 @@
+{
+  "id": "bidRadarSmoke001",
+  "name": "bid-radar-smoke",
+  "active": false,
+  "nodes": [
+    {
+      "id": "0b6a3c1e-1f00-4a01-9a01-000000000001",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "0b6a3c1e-1f00-4a01-9a01-000000000002",
+      "name": "Daily 08:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        200
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "days",
+              "daysInterval": 1,
+              "triggerAtHour": 8,
+              "triggerAtMinute": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "0b6a3c1e-1f00-4a01-9a01-000000000003",
+      "name": "Fetch Nara Bids",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        100
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.NARA_API_BASE }}/{{ $env.NARA_BID_OPERATION }}",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "serviceKey",
+              "value": "={{ $env.NARA_API_KEY }}"
+            },
+            {
+              "name": "type",
+              "value": "json"
+            },
+            {
+              "name": "inqryDiv",
+              "value": "1"
+            },
+            {
+              "name": "pageNo",
+              "value": "1"
+            },
+            {
+              "name": "numOfRows",
+              "value": "100"
+            },
+            {
+              "name": "inqryBgnDt",
+              "value": "={{ $now.minus({days:1}).toFormat('yyyyMMddHHmm') }}"
+            },
+            {
+              "name": "inqryEndDt",
+              "value": "={{ $now.toFormat('yyyyMMddHHmm') }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "0b6a3c1e-1f00-4a01-9a01-000000000004",
+      "name": "Match Criteria",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        100
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "language": "javaScript",
+        "jsCode": "/** @typedef {{bidNtceNo:string,bidNtceOrd:string,bidNtceNm:string,ntceInsttNm:string,dminsttNm:string,bidNtceDt:string,bidClseDt:string,presmptPrce:string|number,asignBdgtAmt:string|number,bidNtceDtlUrl:string}} NaraBid */\n/** @typedef {{keywords:string[],regions:string[],budgetMin:number,budgetMax:number,maxItems:number,excludeKeywords?:string[],synonyms?:Record<string,string>}} Criteria */\n/** @typedef {{bidId:string,title:string,org:string,deadline:string,budget:number|null,url:string,reasons:string[],kind:string,openingAt:string|null,budgetBasis:string|null,amounts:object,source?:string}} MatchedBid */\n/** @typedef {{date:string,count:number,items:MatchedBid[],text:string}} Notification */\n\n/**\n * body: object 또는 JSON 문자열. 실패 시 throw new Error('NARA_API_ERROR: <resultCode|NON_JSON|NO_HEADER> <resultMsg>')\n * @param {object|string} body\n * @returns {NaraBid[]}\n */\nfunction normalizeNaraResponse(body) {\n  let data = body;\n  if (typeof data === 'string') {\n    try {\n      data = JSON.parse(data);\n    } catch (e) {\n      throw new Error('NARA_API_ERROR: NON_JSON ' + String(data).slice(0, 100));\n    }\n  }\n  const header = data && data.response && data.response.header;\n  if (!header || typeof header !== 'object') {\n    throw new Error('NARA_API_ERROR: NO_HEADER response.header missing');\n  }\n  if (String(header.resultCode) !== '00') {\n    throw new Error('NARA_API_ERROR: ' + header.resultCode + ' ' + (header.resultMsg || ''));\n  }\n  const items = data.response.body ? data.response.body.items : undefined;\n  if (Array.isArray(items)) return items;\n  if (items && typeof items === 'object') {\n    if (Array.isArray(items.item)) return items.item;\n    if (items.item && typeof items.item === 'object') return [items.item];\n  }\n  return [];\n}\n\nconst BASIS_LABEL = { estimated: '추정가격', base: '기초금액', assigned: '배정예산' };\n\n/** 부가세 표기: 배정예산이 asignBdgtAmt(부가세 여부 미확인 필드)에서 왔으면 '표기 없음' */\nfunction vatLabel(n) {\n  const amounts = n.amounts || {};\n  const raw = n.raw && typeof n.raw === 'object' ? n.raw : {};\n  if (n.budgetBasis === 'assigned' && Number(raw.asignBdgtAmt) > 0) return '표기 없음';\n  if (amounts.vatIncluded === true) return '포함';\n  if (amounts.vatIncluded === false) return '제외';\n  return '표기 없음';\n}\n\n/** @param {any} arr */\nfunction cleanWords(arr) {\n  const out = [];\n  for (const s of Array.isArray(arr) ? arr : []) {\n    const w = String(s ?? '').trim();\n    if (w !== '' && !out.includes(w)) out.push(w);\n  }\n  return out;\n}\n\n/**\n * 규칙: 취소 공고 제외 → 제외 키워드 제외 → 키워드·비슷한 말 일치 → 참가 가능 지역(구조화) → 예산(추정→기초→배정)\n * @param {(NaraBid|object)[]} bids raw item 또는 NormalizedBid\n * @param {Criteria} criteria\n * @returns {MatchedBid[]}\n */\nfunction matchBids(bids, criteria) {\n  const keywords = cleanWords(criteria.keywords);\n  const excludes = cleanWords(criteria.excludeKeywords);\n  const synonyms = criteria.synonyms && typeof criteria.synonyms === 'object' ? criteria.synonyms : {};\n  const wanted = [];\n  for (const r of cleanWords(criteria.regions)) {\n    const keys = regionKeys(r);\n    for (const k of keys.length > 0 ? keys : [r]) if (!wanted.includes(k)) wanted.push(k);\n  }\n  const seen = new Set();\n  const out = [];\n  for (const bid of bids) {\n    const n = normalizeBid(bid, bid && bid.source);\n    if (n.kind === 'cancelled') continue;\n    const title = String(n.title || '');\n    if (excludes.some((x) => title.includes(x))) continue;\n\n    const reasons = [];\n    for (const kw of keywords) {\n      if (title.includes(kw)) reasons.push(`키워드 '${kw}' 일치`);\n    }\n    for (const [word, forKeyword] of Object.entries(synonyms)) {\n      const w = String(word).trim();\n      if (w === '' || keywords.includes(w)) continue;\n      if (title.includes(w)) reasons.push(`비슷한 말 '${w}' 일치 (키워드 '${forKeyword}')`);\n    }\n    if (reasons.length === 0) continue;\n\n    if (wanted.length > 0) {\n      const limited = (n.limits && n.limits.regions) || [];\n      if (limited.length === 0) {\n        reasons.push('지역 제한 없음');\n      } else {\n        const key = wanted.find((k) => limited.includes(k));\n        if (key === undefined) continue;\n        reasons.push(`참가 가능 지역 '${key}' 일치`);\n        const sub = subRegionLimit(n.limits.regionRaw, wanted.filter((k) => limited.includes(k)));\n        if (sub) reasons.push(`참가 가능 지역이 시군구 단위로 제한됨: ${sub}`);\n      }\n    }\n\n    const budget = n.budget;\n    if (budget === null || budget === undefined) {\n      reasons.push('예산 정보 없음');\n    } else if (budget >= criteria.budgetMin && budget <= criteria.budgetMax) {\n      reasons.push(`예산 범위 안 (${BASIS_LABEL[n.budgetBasis]} ${formatBudget(budget)}, 부가세 ${vatLabel(n)})`);\n    } else {\n      continue;\n    }\n\n    if (seen.has(n.bidId)) continue;\n    seen.add(n.bidId);\n    const m = {\n      bidId: n.bidId,\n      title,\n      org: n.org,\n      deadline: n.deadline,\n      budget: budget ?? null,\n      url: n.url,\n      reasons,\n      kind: n.kind,\n      openingAt: n.openingAt,\n      budgetBasis: n.budgetBasis,\n      amounts: n.amounts,\n    };\n    const source = bid && bid.source !== undefined ? bid.source : n.raw && n.raw.source;\n    if (source !== undefined) m.source = source;\n    out.push(m);\n  }\n  out.sort((a, b) => {\n    const x = String(a.deadline || '');\n    const y = String(b.deadline || '');\n    return x < y ? -1 : x > y ? 1 : 0;\n  });\n  return out.slice(0, criteria.maxItems);\n}\n\n/**\n * @param {number|null} won\n * @returns {string}\n */\nfunction formatBudget(won) {\n  if (won === null || won === undefined) return '미공개';\n  if (won >= 100000000) {\n    return (won / 1e8).toFixed(1).replace(/\\.0$/, '') + '억';\n  }\n  return Math.round(won / 10000) + '만';\n}\n\n/**\n * @param {MatchedBid[]} matched\n * @param {string} isoDate 'YYYY-MM-DD'\n * @returns {Notification}\n */\nfunction buildNotification(matched, isoDate) {\n  const [, mm, dd] = String(isoDate).split('-');\n  const head = `입찰 레이더 · ${mm}/${dd}`;\n  const count = matched.length;\n  if (count === 0) {\n    return { date: isoDate, count: 0, items: [], text: `${head} 오늘은 조건에 맞는 새 공고가 없습니다` };\n  }\n  const lines = [`${head} 새 공고 ${count}건`];\n  matched.forEach((m, i) => {\n    lines.push(`${i + 1}. ${m.title}`);\n    lines.push(`   마감 ${m.deadline} · 예산 ${formatBudget(m.budget)}`);\n    lines.push(`   왜 추천: ${m.reasons.join(' · ')}`);\n    lines.push(`   ${m.url}`);\n  });\n  return { date: isoDate, count, items: matched, text: lines.join('\\n') };\n}\n\n/** 시도 표준 키 → 원문에 나오는 이름들 (긴 이름 먼저 맞춘다) */\nconst REGION_TABLE = {\n  서울: ['서울특별시', '서울시', '서울'],\n  부산: ['부산광역시', '부산시', '부산'],\n  대구: ['대구광역시', '대구시', '대구'],\n  인천: ['인천광역시', '인천시', '인천'],\n  광주: ['광주광역시', '광주시', '광주'],\n  대전: ['대전광역시', '대전시', '대전'],\n  울산: ['울산광역시', '울산시', '울산'],\n  세종: ['세종특별자치시', '세종시', '세종'],\n  경기: ['경기도', '경기'],\n  강원: ['강원특별자치도', '강원도', '강원'],\n  충북: ['충청북도', '충북'],\n  충남: ['충청남도', '충남'],\n  전북: ['전북특별자치도', '전라북도', '전북'],\n  전남: ['전라남도', '전남'],\n  경북: ['경상북도', '경북'],\n  경남: ['경상남도', '경남'],\n  제주: ['제주특별자치도', '제주도', '제주'],\n};\n\n/**\n * 참가 가능 지역 원문 중 keys(시도 표준 키) 에 해당하는 조각이 모두 시군구 단위면 그 조각들을 ', ' 로 이어 돌려준다.\n * 시도 전체가 열린 조각이 하나라도 있거나 해당 조각이 없으면 null. ('경기도 수원시' → '경기도 수원시', '경기도' → null)\n * @param {string} text\n * @param {string[]} keys\n * @returns {string|null}\n */\nfunction subRegionLimit(text, keys) {\n  const subs = [];\n  let whole = false;\n  for (const raw of String(text || '').split(/[,·/;\\n]+/)) {\n    const seg = raw.trim();\n    if (seg === '') continue;\n    const k = regionKeys(seg)[0];\n    if (!k || !keys.includes(k)) continue;\n    const name = REGION_TABLE[k].filter((n) => seg.startsWith(n)).sort((a, b) => b.length - a.length)[0];\n    const rest = name ? seg.slice(name.length).trim() : seg;\n    if (rest !== '' && /\\S(시|군|구)(\\s|$)/.test(rest)) subs.push(seg);\n    else whole = true;\n  }\n  return !whole && subs.length > 0 ? subs.join(', ') : null;\n}\n\n/**\n * 원문에서 시도 표준 키를 뽑는다 (중복 제거, 나온 순서).\n * 쉼표 등으로 나눈 조각마다 앞머리의 시도 이름을 먼저 보고('경기도 광주시' → 경기),\n * 앞머리에 없으면 조각 안에서 가장 먼저 나오는 이름을 쓴다.\n * @param {string} text\n * @returns {string[]}\n */\nfunction regionKeys(text) {\n  const out = [];\n  const segments = String(text || '').split(/[,·/;\\n]+/);\n  for (const raw of segments) {\n    const seg = raw.trim();\n    if (seg === '') continue;\n    let best = null;\n    for (const [key, names] of Object.entries(REGION_TABLE)) {\n      for (const name of names) {\n        if (seg.startsWith(name) && (!best || best.at !== 0 || name.length > best.len)) {\n          best = { key, at: 0, len: name.length };\n        }\n      }\n    }\n    if (!best) {\n      for (const [key, names] of Object.entries(REGION_TABLE)) {\n        for (const name of names) {\n          const at = seg.indexOf(name);\n          if (at < 0) continue;\n          if (!best || at < best.at || (at === best.at && name.length > best.len)) {\n            best = { key, at, len: name.length };\n          }\n        }\n      }\n    }\n    if (best && !out.includes(best.key)) out.push(best.key);\n  }\n  return out;\n}\n\n/** @param {any} v */\nfunction normText(v) {\n  const s = v === null || v === undefined ? '' : String(v).trim();\n  return s === '' ? null : s;\n}\n\n/** @param {any} v */\nfunction normAmount(v) {\n  if (v === null || v === undefined || String(v).trim() === '') return null;\n  const n = Number(v);\n  return Number.isFinite(n) && n > 0 ? n : null;\n}\n\n/**\n * 공고번호 목록 문자열 → 번호 배열. 실측은 쉼표 구분·차수 없음이지만 ; ^ | 공백도 받는다.\n * 토큰 끝 '-NNN'(차수) 제거, 영숫자 6자 이상만, 순서 유지 중복 제거. 문자열이 아니거나 비면 [].\n * @param {unknown} value\n * @returns {string[]}\n */\nfunction parseNoticeNos(value) {\n  if (typeof value !== 'string') return [];\n  const out = [];\n  for (const raw of value.split(/[,;^|\\s]+/)) {\n    const no = raw.trim().replace(/-\\d{3}$/, '');\n    if (/^[A-Za-z0-9]{6,}$/.test(no) && !out.includes(no)) out.push(no);\n  }\n  return out;\n}\n\n/**\n * 나라장터 item(보조 목록 병합 포함)을 NormalizedBid 로 바꾼다. 이미 normalized(limits 있음)면 그대로.\n * @param {object} item\n * @param {string} [sourceId]\n * @returns {object} NormalizedBid\n */\nfunction normalizeBid(item, sourceId) {\n  if (item && typeof item === 'object' && item.limits && typeof item.limits === 'object') return item;\n  const it = item && typeof item === 'object' ? item : {};\n  const src = String(sourceId ?? it.source ?? '');\n  const prestd = /prestd/.test(src) || (!normText(it.bidNtceNo) && Boolean(normText(it.bfSpecRgstNo)));\n\n  const noticeNo = prestd ? String(normText(it.bfSpecRgstNo) ?? '') : String(it.bidNtceNo ?? '');\n  const ord = prestd ? '000' : String(it.bidNtceOrd ?? '');\n  const bidId = prestd ? `PS${noticeNo}-000` : `${noticeNo}-${ord}`;\n\n  let kind = 'new';\n  if (prestd) kind = 'prestd';\n  else {\n    const k = String(it.ntceKindNm ?? '');\n    if (k.includes('취소')) kind = 'cancelled';\n    else if (k.includes('재공고')) kind = 'rebid';\n    else if (k.includes('연기')) kind = 'postponed';\n    else if (k.includes('변경')) kind = 'changed';\n  }\n\n  const estimated = normAmount(it.presmptPrce);\n  const base = normAmount(it.bssamt);\n  const assigned = normAmount(it.asignBdgtAmt) ?? normAmount(it.bdgtAmt);\n  let budget = null;\n  let budgetBasis = null;\n  let vatIncluded = null;\n  if (estimated !== null) [budget, budgetBasis, vatIncluded] = [estimated, 'estimated', false];\n  else if (base !== null) [budget, budgetBasis, vatIncluded] = [base, 'base', true];\n  else if (assigned !== null) [budget, budgetBasis, vatIncluded] = [assigned, 'assigned', true];\n\n  const rgnList = Array.isArray(it.prtcptPsblRgnList) ? it.prtcptPsblRgnList : [];\n  const rgnNames = rgnList.map((r) => normText(r && r.prtcptPsblRgnNm)).filter((s) => s !== null);\n  const regionRaw = rgnNames.length > 0 ? rgnNames.join(', ') : normText(it.prtcptLmtRgnNm);\n\n  const licenses = [];\n  const lcnsList = Array.isArray(it.lcnsLmtList) ? it.lcnsLmtList : [];\n  for (const l of lcnsList) {\n    const s = normText(l && l.lcnsLmtNm);\n    if (s === null) continue;\n    const cut = s.lastIndexOf('/');\n    const name = (cut >= 0 ? s.slice(0, cut) : s).trim();\n    const code = cut >= 0 ? normText(s.slice(cut + 1)) : null;\n    if (name === '' || licenses.some((x) => x.name === name && x.code === code)) continue;\n    licenses.push({ name, code });\n  }\n\n  let attachments = [];\n  if (Array.isArray(it.attachments)) {\n    attachments = it.attachments.filter((a) => a && a.url).map((a) => ({ name: String(a.name ?? ''), url: String(a.url) }));\n  } else {\n    for (let i = 1; i <= 10; i++) {\n      const url = normText(it[`ntceSpecDocUrl${i}`]);\n      if (url === null) continue;\n      attachments.push({ name: normText(it[`ntceSpecFileNm${i}`]) ?? url.split('/').pop(), url });\n    }\n  }\n\n  const title = prestd ? normText(it.prdctClsfcNoNm) ?? normText(it.bfSpecNm) ?? '' : String(it.bidNtceNm ?? '');\n  const noticeOrg = normText(it.ntceInsttNm) ?? (prestd ? normText(it.orderInsttNm) : null) ?? '';\n  const org = normText(it.dminsttNm) ?? (prestd ? normText(it.rlDminsttNm) : null) ?? noticeOrg;\n\n  const specNo = normText(it.bfSpecRgstNo);\n  const links = prestd\n    ? { prestdId: bidId, noticeNos: parseNoticeNos(it.bidNtceNoList) }\n    : { prestdId: specNo ? `PS${specNo}-000` : null, noticeNos: [] };\n\n  return {\n    bidId,\n    noticeNo,\n    ord,\n    kind,\n    title,\n    org,\n    noticeOrg,\n    postedAt: normText(it.bidNtceDt),\n    deadline: normText(it.bidClseDt) ?? (prestd ? normText(it.opninRgstClseDt) : null),\n    openingAt: normText(it.opengDt),\n    amounts: { estimated, base, assigned, vatIncluded },\n    budget,\n    budgetBasis,\n    limits: { regions: regionKeys(regionRaw || ''), regionRaw, licenses, sme: null },\n    url: normText(it.bidNtceDtlUrl),\n    attachments,\n    sourceId: src,\n    links,\n    raw: item,\n  };\n}\n\nconst criteria = {\"keywords\":[\"조경\",\"수목\",\"가로수\",\"공원\"],\"regions\":[\"경기\",\"서울\"],\"budgetMin\":30000000,\"budgetMax\":500000000,\"maxItems\":5};\nconst bids = normalizeNaraResponse($input.first().json);\nreturn [{ json: buildNotification(matchBids(bids, criteria), $now.toFormat('yyyy-MM-dd')) }];\n"
+      }
+    },
+    {
+      "id": "0b6a3c1e-1f00-4a01-9a01-000000000005",
+      "name": "Send Notification",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        720,
+        100
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.NOTIFY_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Fetch Nara Bids",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Daily 08:00": {
+      "main": [
+        [
+          {
+            "node": "Fetch Nara Bids",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Nara Bids": {
+      "main": [
+        [
+          {
+            "node": "Match Criteria",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Match Criteria": {
+      "main": [
+        [
+          {
+            "node": "Send Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Seoul"
+  },
+  "pinData": {}
+}

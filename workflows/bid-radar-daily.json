@@ -1,0 +1,463 @@
+{
+  "id": "bidRadarDaily001",
+  "name": "bid-radar-daily",
+  "active": false,
+  "nodes": [
+    {
+      "id": "0b6a3c1e-2f00-4a01-9b01-000000000001",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "0b6a3c1e-2f00-4a01-9b01-000000000002",
+      "name": "Daily 08:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        200
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "days",
+              "daysInterval": 1,
+              "triggerAtHour": 8,
+              "triggerAtMinute": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "0b6a3c1e-2f00-4a01-9b01-000000000003",
+      "name": "Reminders 08:10",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        400
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "days",
+              "daysInterval": 1,
+              "triggerAtHour": 8,
+              "triggerAtMinute": 10
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "0b6a3c1e-2f00-4a01-9b01-000000000004",
+      "name": "Support 08:20",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        600
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "days",
+              "daysInterval": 1,
+              "triggerAtHour": 8,
+              "triggerAtMinute": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "0b6a3c1e-2f00-4a01-9b01-000000000005",
+      "name": "Call Daily",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        260,
+        200
+      ],
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.APP_BASE_URL }}/api/jobs/daily?all=1",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-job-token",
+              "value": "={{ $env.APP_JOB_TOKEN }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "0b6a3c1e-2f00-4a01-9b01-000000000006",
+      "name": "Call Reminders",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        260,
+        400
+      ],
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.APP_BASE_URL }}/api/jobs/reminders?all=1",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-job-token",
+              "value": "={{ $env.APP_JOB_TOKEN }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "0b6a3c1e-2f00-4a01-9b01-000000000007",
+      "name": "Call Support",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        260,
+        600
+      ],
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.APP_BASE_URL }}/api/jobs/support?all=1",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-job-token",
+              "value": "={{ $env.APP_JOB_TOKEN }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "0b6a3c1e-2f00-4a01-9b01-000000000008",
+      "name": "Has Text Daily",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        520,
+        200
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0b6a3c1e-2f00-4a01-9b01-000000000009",
+              "leftValue": "={{ typeof $json.text === 'string' && $json.text.length > 0 }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "0b6a3c1e-2f00-4a01-9b01-000000000010",
+      "name": "Has Text Reminders",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        520,
+        400
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0b6a3c1e-2f00-4a01-9b01-000000000011",
+              "leftValue": "={{ typeof $json.text === 'string' && $json.text.length > 0 }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "0b6a3c1e-2f00-4a01-9b01-000000000012",
+      "name": "Has Text Support",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        520,
+        600
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0b6a3c1e-2f00-4a01-9b01-000000000013",
+              "leftValue": "={{ typeof $json.text === 'string' && $json.text.length > 0 }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "0b6a3c1e-2f00-4a01-9b01-000000000014",
+      "name": "Send Daily",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        780,
+        200
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $json.notifyUrl || $env.NOTIFY_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json, (k, v) => k === 'notifyUrl' ? undefined : v) }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "0b6a3c1e-2f00-4a01-9b01-000000000015",
+      "name": "Send Reminders",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        780,
+        400
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $json.notifyUrl || $env.NOTIFY_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json, (k, v) => k === 'notifyUrl' ? undefined : v) }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "0b6a3c1e-2f00-4a01-9b01-000000000016",
+      "name": "Send Support",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        780,
+        600
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $json.notifyUrl || $env.NOTIFY_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json, (k, v) => k === 'notifyUrl' ? undefined : v) }}",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Call Daily",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call Reminders",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call Support",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Daily 08:00": {
+      "main": [
+        [
+          {
+            "node": "Call Daily",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Daily": {
+      "main": [
+        [
+          {
+            "node": "Has Text Daily",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has Text Daily": {
+      "main": [
+        [
+          {
+            "node": "Send Daily",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Reminders 08:10": {
+      "main": [
+        [
+          {
+            "node": "Call Reminders",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Reminders": {
+      "main": [
+        [
+          {
+            "node": "Has Text Reminders",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has Text Reminders": {
+      "main": [
+        [
+          {
+            "node": "Send Reminders",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Support 08:20": {
+      "main": [
+        [
+          {
+            "node": "Call Support",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Support": {
+      "main": [
+        [
+          {
+            "node": "Has Text Support",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has Text Support": {
+      "main": [
+        [
+          {
+            "node": "Send Support",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Seoul"
+  },
+  "pinData": {}
+}
